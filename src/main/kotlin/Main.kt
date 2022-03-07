@@ -7,17 +7,22 @@ fun main () {
 
 fun checkCommission() {
     val commission = 0.75
-    val minValue = 35
-    val amount = 500_000
-    val result = minValue + amount * commission / 100
+    val minValue = 3_500
+    val amount = 788888
+    var result = (amount * commission / 100)
+    if (result < minValue) {
+        result = 3500.0
+    }
     println("Комиссия: " + Math.round(result) + " коп.")
+
 }
 
 fun checkLikes() {
-    val likes = 2
+    val likes = 211
     val result = if (likes % 2 == 0) " людям" else " человеку"
     println("Понравилось: " + likes + result)
 }
+
  fun checkDiscountForMelomans () {
      val amount = 20000
      val meloman = true
